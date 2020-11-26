@@ -22,14 +22,23 @@ void test(){
 
 int main(int argc, char *argv[])
 {
+    //Toggle this to start saving to new data files
+    bool save_tests = false;
     FileIO number_file("test_number.txt");
-    string test = number_file.readFile();
-    cout << test << endl;
+    string test;
+    if(save_tests){
+        test = number_file.readFile();
+        cout << test << endl;
+    }else{
+        test = "-1";
+    }
     QApplication a(argc, argv);
     MainWindow w(test);
-    int test_number = stoi(test);
-    test_number++;
-    number_file.writeFile(to_string(test_number));
+    if(save_tests){
+        int test_number = stoi(test);
+        test_number++;
+        number_file.writeFile(to_string(test_number));
+    }
     w.show();
     return a.exec();
 //    test();

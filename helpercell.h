@@ -11,7 +11,7 @@ public:
         p_absorb_rate = 0;
         total_p = 0;
         //Pure probability of dividing
-        divide_parameter = 0.06;
+        divide_parameter = 0.051;
         death_rate = 0.05;
         p_move = 0.8;
         p_move_prev = p_move;

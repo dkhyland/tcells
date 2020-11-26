@@ -13,6 +13,7 @@ MainWindow::MainWindow(string test, QWidget *parent) :
 {
     ui->setupUi(this);
     this->resize(int(frame_height),int(frame_height+30));
+    // Add/remove d cells when switching signal model
     cells.initialise(50,50,0);
 
     //Timer for updating positions

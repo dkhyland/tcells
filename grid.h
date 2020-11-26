@@ -18,7 +18,7 @@ public:
             }
             gridCells.push_back(current_row);
         }
-        diffusion_const = 1;
+        diffusion_const = 0.4;
         decay_const = 0.1;
     }
 

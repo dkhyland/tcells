@@ -34,7 +34,7 @@ public:
         time_elapsed = 0;
         frame_scale = frame_height/m_rows;
         diffuse_signal = true;
-        no_flux = false;
+        no_flux = true;
     }
 
     ~AllCells(){
@@ -539,7 +539,6 @@ public:
         if(diffuse_signal){
             //Decay the signal
             grid.decayPSignal();
-
             //Diffuse signal
             for(unsigned int i=0;i < diffusion_cycles; i++){
                 grid.diffusePSignal();
